@@ -1,0 +1,57 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-6 bg-gray-200">                      
+    <div class="w-full max-w-screen-xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h1 class="text-3xl font-bold mb-6">Expense Tracker</h1>
+        
+        <div id="budget-section" class="mb-6">
+            <h2 class="text-xl mb-4">Budget: <span id="budget" class="text-blue-500">₹0</span></h2>
+            <div class="flex items-center space-x-2">
+                <input type="number" id="budget-amount" placeholder="Set Budget" class="border p-2 rounded-md flex-1">
+                <button id="set-budget" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">Set Budget</button>
+            </div>
+        </div>
+
+        <div id="expense-input" class="mb-6">
+            <div class="flex items-center space-x-2">
+                <input type="text" id="expense-name" placeholder="Expense Name" class="border p-2 rounded-md flex-1">
+                <input type="number" id="expense-amount" placeholder="Amount" class="border p-2 rounded-md flex-1">
+                <button id="add-expense" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">Add Expense</button>
+            </div>
+        </div>
+
+        <div id="chart-container" class="mb-6 flex justify-center items-center">
+            <canvas id="expense-chart" class="w-full h-64"></canvas>
+        </div>
+
+        <div id="ai-advice" class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">AI Financial Advisor</h2>
+            <p id="advice-text" class="text-gray-700"></p>
+        </div>
+        
+        <div id="tax-calculator" class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Tax Calculator</h2>
+            <div class="flex items-center space-x-2">
+                <input type="number" id="income" placeholder="Annual Income" class="border p-2 rounded-md flex-1 focus:outline-none focus:ring-2 focus:ring-green-500">
+                <button id="calculate-tax" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">Calculate Tax</button>
+            </div>
+            <p id="tax-amount" class="mt-2 text-green-600"></p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
+    <script src="chart.js"></script>
+    <script src="ai-advisor.js"></script>
+    <script src="tax-calculator.js"></script>
+</body>
+</html>
+
